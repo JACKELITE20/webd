@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Your Name - Tech Profile</title>
+</head>
+<body>
+
+  <nav>
+    <button onclick="showSection('home')">Home</button>
+    <button onclick="showSection('about')">About Me</button>
+    <button onclick="showSection('skills')">Skills</button>
+    <button onclick="showSection('contact')">Contact</button>
+  </nav>
+
+  <header>
+    <h1>Your Name</h1>
+    <p>Tech Enthusiast</p>
+  </header>
+
+  <section id="home">
+    <h2>Welcome to My Tech Profile!</h2>
+    <p>This is the home section. Feel free to explore more about me and my skills.</p>
+  </section>
+
+  <section id="about" style="display: none;">
+    <h2>About Me</h2>
+    <p>Welcome to my tech profile! I'm passionate about exploring the latest technologies...</p>
+  </section>
+
+  <section id="skills" style="display: none;">
+    <h2>Skills</h2>
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+      <li>React</li>
+      <li>Node.js</li>
+      <!-- Add more skills as needed -->
+    </ul>
+  </section>
+
+  <section id="contact" style="display: none;">
+    <h2>Contact</h2>
+    <p>Email: iit2023228@iiita.ac.in</p>
+    <p>Contact Number: +91 9026547954 </p>
+  </section>
+
+  <script>
+    // Show the home section by default
+    showSection('home');
+
+    function showSection(sectionId) {
+      // Hide all sections
+      document.getElementById('home').style.display = 'none';
+      document.getElementById('about').style.display = 'none';
+      document.getElementById('skills').style.display = 'none';
+      document.getElementById('contact').style.display = 'none';
+
+      // Show the selected section
+      document.getElementById(sectionId).style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
