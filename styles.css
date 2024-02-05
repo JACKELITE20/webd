@@ -1,7 +1,7 @@
 /* styles.css */
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Oswald', sans-serif;
   background-color: #111; /* Dark Gray */
   color: #fff;
   margin: 0;
@@ -11,7 +11,7 @@ body {
 nav {
   background-color: #0074E4; /* Electric Blue */
   padding: 10px;
-  text-align: left;
+  text-align: right;
 }
 
 button {
@@ -44,12 +44,23 @@ section {
   margin: 20px;
 }
 
-ul {
-  list-style-type: none;
+ol {
+  list-style-type: circle;
   padding: 0;
 }
 
 li {
   display: inline-block;
   margin-right: 10px;
+}
+img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.profile-title{
+  
+  color:whitesmoke;
+  text-align: left;
 }
