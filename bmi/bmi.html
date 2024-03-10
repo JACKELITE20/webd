@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>BMI Calculator</title>
+        <link rel="stylesheet" href="stylesbmi.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+        <script src="script.js" defer></script>
+    </head>
+    <body>  
+        <h2> Body Mass Index Calculator </h2>
+        <div id="Major">
+        <div id="Calculator">
+            <p> Enter Your Height (in Cm) 
+                <input type="text" id="height"><br> <span id="height_error"></span>
+            </p>
+            <p> Enter your Weight (in Kg)
+                <input type="text" id="weight"><br> <span id="weight_eror"></span>
+            </p>
+            <button id="btn"> Calculate </button>
+            <p id="output"></p>
+        </div>
+        <br>
+        <div id="info">
+
+            <table>
+                <tr>
+                  <th>Classification</th>
+                  <th>BMI Range- Kg/m<sup>2</sup></th>
+                </tr>
+                <tr>
+                  <td>Severe Thinness</td>
+                  <td style="align-items: center;">  <16%</td>
+                </tr>
+                <tr>
+                  <td>Moderate Thinness</td>
+                  <td>16 - 17</td>
+                </tr>
+                <tr>
+                    <td>Mild Thinness</td>
+                    <td>17 - 18.5</td>
+                </tr>
+                <tr>
+                    <td>Normal</td>
+                    <td> 18.5 - 25</td>
+                </tr>
+                <tr>
+                    <td>Overweight</td>
+                    <td>25 - 30</td>
+                </tr>
+                <tr>
+                    <td>Obese</td>
+                    <td> >30%</td>
+                </tr>
+              </table>
+            
+        </div>
+    </div>
+    </body>
+</html>
