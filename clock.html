@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .clock {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            border: 5px solid #333;
+            border-radius: 50%;
+        }
+
+        .hand {
+            position: absolute;
+            background-color: #333;
+            transform-origin: 50% 100%; /* Updated transform origin for all hands */
+            transform: translateX(-50%);
+        }
+
+        .hour-hand {
+            height: 40px;
+            width: 4px;
+            top: 50px; /* Adjusted position to align with the center */
+            left: 50%;
+        }
+
+        .minute-hand {
+            height: 60px;
+            width: 2px;
+            top: 40px; /* Adjusted position to align with the center */
+            left: 50%;
+        }
+
+        .second-hand {
+            height: 70px;
+            width: 1px;
+            background-color: red;
+            top: 30px; /* Adjusted position to align with the center */
+            left: 50%;
+        }
+
+        .center {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background-color: #333;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+    <title>Analog Clock</title>
+</head>
+<body>
+    <div class="clock">
+        <div class="hand hour-hand" id="hourHand"></div>
+        <div class="hand minute-hand" id="minuteHand"></div>
+        <div class="hand second-hand" id="secondHand"></div>
+        <div class="center"></div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const hourHand = document.getElementById('hourHand');
+            const minuteHand = document.getElementById('minuteHand');
+            const secondHand = document.getElementById('secondHand');
+
+            function updateClock() {
+                const now = new Date();
+                const hours = now.getHours() % 12; // Convert to 12-hour format
+                const minutes = now.getMinutes();
+                const seconds = now.getSeconds();
+
+                const hourDeg = (hours * 30) + (0.5 * minutes); // 30 degrees per hour, 0.5 degrees per minute
+                const minuteDeg = (minutes * 6) + (0.1 * seconds); // 6 degrees per minute, 0.1 degrees per second
+                const secondDeg = seconds * 6; // 6 degrees per second
+
+                hourHand.style.transform = `rotate(${hourDeg}deg)`;
+                minuteHand.style.transform = `rotate(${minuteDeg}deg)`;
+                secondHand.style.transform = `rotate(${secondDeg}deg)`;
+            }
+
+            setInterval(updateClock, 1000); // Update the clock every second
+            updateClock(); // Initial update
+        });
+    </script>
+</body>
+</html>
