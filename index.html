@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;600&display=swap" rel="stylesheet">
-  <title>Yash Verma - Tech Profile</title>
+  <title>Your Name - Tech Profile</title>
 </head>
 <body>
 
@@ -43,6 +43,7 @@
       <li>CSS</li>
       <li>Video Editing</li>
       <li>C/C++</li>
+      <!-- Add more skills as needed -->
     </ol>
   </section>
 
@@ -70,7 +71,31 @@
       </tr>
       <tr>
         <th>Responsive Login and Sign-Up page</th>
-        <th><a href="/login/login.html">Click Here!</a></th>
+        <th><a href="./login/login.html">Click Here!</a></th>
+      </tr>
+      <tr>
+        <th>Tip Calculator</th>
+        <th><a href="./tipcalculator/index.html">Click Here!</a></th>
+      </tr>
+      <tr>
+        <th>Payrole Management</th>
+        <th><a href="./payroll/index.html">Click Here!</a></th>
+      </tr>
+      <tr>
+        <th>Slide Down Nav Bar</th>
+        <th><a href="./slidedown/index.html">Click Here!</a></th>
+      </tr>
+      <tr>
+        <th>Network Speed Detector</th>
+        <th><a href="./network/index.html">Click Here!</a></th>
+      </tr>
+      <tr>
+        <th>Text to Speech Converter</th>
+        <th><a href="./tts/index.html">Click Here!</a></th>
+      </tr>
+      <tr>
+        <th>Mouse Parallax</th>
+        <th><a href="./parallax/index.html">Click Here!</a></th>
       </tr>
       <tr>
         <th>Blog Site Project</th>
@@ -87,9 +112,11 @@
   </section>
 
   <script>
+    // Show the home section by default
     showSection('home');
 
     function showSection(sectionId) {
+      // Hide all sections
       document.getElementById('home').style.display = 'none';
       document.getElementById('about').style.display = 'none';
       document.getElementById('skills').style.display = 'none';
@@ -97,6 +124,7 @@
       document.getElementById('projects').style.display = 'none';
 
 
+      // Show the selected section
       document.getElementById(sectionId).style.display = 'block';
     }
   </script>
